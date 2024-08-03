@@ -1,7 +1,7 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-
 from ..database import Base
+
 
 class Users(Base):
     __tablename__ = "users"
@@ -17,7 +17,6 @@ class Todo(Base):
     title = Column(String(255), index=True)
     description = Column(String(255), index=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
-
     owner = relationship("Users",back_populates="todos")
     
 class Test(Base):
