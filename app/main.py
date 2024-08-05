@@ -14,6 +14,16 @@ app = FastAPI()
 
 app.include_router(user_controller.router)
 
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
+
+@app.get("/", response_class=HTMLResponse)
+async def read_home(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
+
+@app.get("/safety_insights", response_class=HTMLResponse)
+async def safety_insights(request: Request):
+    return templates.TemplateResponse("safety_insights.html", {"request": request})
 
 # @app.post("/users/",response_model=schemas.User)
 # def post_user(user:schemas.UserCreate, db:Session=Depends(get_db)):
