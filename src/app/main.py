@@ -5,7 +5,7 @@ from .controllers import user_controller
 from .db.models import models
 from .db.database import engine
 from .controllers import user_controller
-from ..ui.app import app
+from ..ui.main import app
 
 models.Base.metadata.create_all(bind= engine)
 
