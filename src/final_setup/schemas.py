@@ -1,44 +1,44 @@
 from pydantic import BaseModel, condecimal
 from enum import Enum
 
-class TodoBase(BaseModel):
-    title : str
-    description : str | None = None
+# class TodoBase(BaseModel):
+#     title : str
+#     description : str | None = None
 
 
-class TodoCreate(TodoBase):
-    pass
+# class TodoCreate(TodoBase):
+#     pass
 
         
-class Todo(TodoBase):
-    id : int
-    owner_id  : int
+# class Todo(TodoBase):
+#     id : int
+#     owner_id  : int
 
-    class Config:
-        orm_mode = True
-
-
-class UserBase(BaseModel):
-    email: str
-    name: str
+#     class Config:
+#         orm_mode = True
 
 
-class UserCreate(UserBase):
-    pass 
+# class UserBase(BaseModel):
+#     email: str
+#     name: str
 
 
-class User(UserBase):
-    id : int
-    is_active : bool
-    todos : list[Todo] = []
+# class UserCreate(UserBase):
+#     pass 
 
-    class Config:
-        orm_model = True
 
-class TestBase(BaseModel):
-    email: str
+# class User(UserBase):
+#     id : int
+#     is_active : bool
+#     todos : list[Todo] = []
 
-class Test(TestBase):
+#     class Config:
+#         orm_model = True
+
+# class TestBase(BaseModel):
+#     email: str
+
+# class Test(TestBase):
     id: int
     class Config:
         orm_model = True
