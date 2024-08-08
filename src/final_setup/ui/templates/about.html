@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block container_class %}container mt-4{% endblock %}
+{% block content %}
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <style>
+            .hero-section {
+                background: url('../static/firstbikebanner.jpg') no-repeat center center;
+                background-size: cover;
+                color: #fff;
+                text-align: center;
+                padding: 100px 0;
+                height: 100%;
+            }
+            .hero-section h1 {
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            .about-section {
+                padding: 60px 0;
+            }
+            .about-section .icon {
+                font-size: 2rem;
+                color: #0d6efd;
+            }
+            .about-section h4 {
+                margin-top: 20px;
+                font-weight: bold;
+            }
+            .about-section p {
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+    <body>
+            <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Transforming Urban Cycling</h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section text-center">
+        <div class="container">
+            <h2 class="display-4 mb-5">Our Solution</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-chart-line icon"></i>
+                    <h4>Real-Time Safety Insights</h4>
+                    <p class="text-center">Avoid high-risk areas with up-to-date accident data.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <h4>Safe Pathfinding</h4>
+                    <p class="text-center">Find the safest, most efficient paths tailored to your needs.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fas fa-users icon"></i>
+                    <h4>Community Focused</h4>
+                    <p class="text-center"> Supporting professionals, CBD residents etc in creating a greener city.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>
+
+{% endblock %}

@@ -2,27 +2,21 @@
 {% block title %}Home{% endblock %}
 {% block container_class %}container mt-4{% endblock %}
 {% block content %}
-<div class="image-container">
+<!-- <div class="image-container">
         <img src="/static/homepage.png" alt="Biking in Melbourne" class="wide-image">
-        <div class="image-text-overlay">
-            Welcome to the BikeSafe in Melbourne
+        <div class="image-text-overlay fs-3">
+            BIKESAFE NAVIGATOR...
+        </div>
+</div> -->
+<body>
+    <div class="card bg-dark text-white">
+        <img src="/static/homepage.png" class="card-img" alt="Homepage Image">
+        <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start p-3">
+            <h5 class="card-title card-title-secondary">BIKESAFE NAVIGATOR</h5>
+            <p class="card-text">Creating a safer, greener commute in Melbourne!</p>
+            <a href="/about" class="btn btn-secondary mt-3" id="learn_more_button">Learn More</a>
         </div>
     </div>
-    <p class="text-justify introduction">As the climate crisis intensifies and environmental awareness grows, there is a compelling shift towards sustainable transportation. In Melbourne,
-        the need for improved urban planning is critical to ensure safe, affordable, and green living conditions. Cycling emerges as a clean and healthy mode of commuting,
-        offering numerous benefits for both individuals and the environment. However, safety concerns, stemming from heavy traffic and inadequate infrastructure, discourage
-        many potential cyclists.<br> </p>
-    <p class="text-justify introduction">
-        Cycling significantly reduces greenhouse gas emissions and helps mitigate air pollution, contributing to cleaner air and a healthier environment. It also reduces traffic
-        congestion, making urban areas more accessible and less crowded. For individuals, cycling is an excellent form of exercise that improves cardiovascular health, boosts
-        mental well-being, and enhances overall fitness.
-    </p>
-    <div class="image-container">
-        <img src="/static/accidents.jpg" alt="Biking accidents in Melbourne" class="wide-image">
-    </div>
-    <p class="text-justify introduction">
-        However, safety concerns, stemming from heavy traffic and inadequate infrastructure, discourage many potential cyclists.
-        Addressing these safety issues is crucial for encouraging more Victorians to embrace cycling as a reliable and eco-friendly alternative. By prioritizing safety
-        insights and implementing strategic improvements, we can create a safer, more inviting environment for cyclists across Melbourne.
-    </p>
+</body>
+
 {% endblock %}
