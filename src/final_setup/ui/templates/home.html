@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block container_class %}container mt-4{% endblock %}
+{% block content %}
+<!-- <div class="image-container">
+        <img src="/static/homepage.png" alt="Biking in Melbourne" class="wide-image">
+        <div class="image-text-overlay fs-3">
+            BIKESAFE NAVIGATOR...
+        </div>
+</div> -->
+<body>
+    <div class="card bg-dark text-white">
+        <img src="/static/homepage.png" class="card-img" alt="Homepage Image">
+        <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start p-3">
+            <h5 class="card-title card-title-secondary">BIKESAFE NAVIGATOR</h5>
+            <p class="card-text">Creating a safer, greener commute in Melbourne!</p>
+            <a href="/about" class="btn btn-secondary mt-3" id="learn_more_button">Learn More</a>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
