@@ -16,15 +16,3 @@ log = logging.getLogger(__name__)
 models.Base.metadata.create_all(bind = engine)
 
 app.include_router(main_controller.router)
-
-# @app.get("/", response_class=HTMLResponse)
-# async def read_home(request: Request):
-#     return templates.TemplateResponse("home.html", {"request": request})
-
-# @app.get("/safety_insights", response_class=HTMLResponse)
-# async def safety_insights(request: Request):
-#     return templates.TemplateResponse("safety_insights.html", {"request": request})
-
-# @app.get("/bicycle_routes", response_class=HTMLResponse)
-# async def bicycle_routes(request: Request):
-#     return templates.TemplateResponse("bicycle_routes.html", {"request": request})
